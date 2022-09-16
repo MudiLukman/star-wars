@@ -1,0 +1,7 @@
+com\sovtech\starwarsbackend\web\StarWarsController.class
+com\sovtech\starwarsbackend\StarWarsBackendApplication.class
+com\sovtech\starwarsbackend\person\model\Person.class
+com\sovtech\starwarsbackend\config\ClientForwardController.class
+com\sovtech\starwarsbackend\person\model\PersonResponse.class
+com\sovtech\starwarsbackend\config\BeanProducerConfig.class
+com\sovtech\starwarsbackend\person\PersonService.class

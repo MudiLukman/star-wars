@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-card-title>Detail</mat-card-title>
+    <mat-card-content>
+        <ng-container *ngIf="person">
+            Name: {{person.name}}<br>
+            Mass: {{person.mass}}<br>
+            Gender: {{person.gender}}<br>
+            Home world: {{person.homeworld}}
+        </ng-container>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="back()">Back</button>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>People</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <table [dataSource]="dataSource" style="width: 100%" mat-table>
+            <ng-container *ngFor="let column of columns; trackBy: trackByProperty">
+                <ng-container [matColumnDef]="column.property">
+                    <th *matHeaderCellDef class="uppercase" mat-header-cell> {{ column.label }}</th>
+                    <td *matCellDef="let row" mat-cell>{{ row[column.property] }}</td>
+                </ng-container>
+            </ng-container>
+
+            <tr *matHeaderRowDef="visibleColumns" mat-header-row></tr>
+            <tr (click)="viewPerson(row)"
+                *matRowDef="let row; columns: visibleColumns;"
+                mat-row>
+            </tr>
+        </table>
+        <mat-paginator [pageSize]="pageSize" [length]="total" (page)="page($event)">
+        </mat-paginator>
+    </mat-card-content>
+</mat-card>
